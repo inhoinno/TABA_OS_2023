@@ -18,7 +18,8 @@ int main(int argc, char *argv[]){
 		exit(-1);	}
 	fd_origin 	= open(argv[1], O_RDONLY);
 	
-    /*TODO [1] fall through. get file attribute structure from fd_origin */
+
+    fstat(fd_origin, stat_origin);
     
     flag_origin = /*TODO [2] */;
     /* fall through. let's get member from struct stat "stat_origin.some_field_here" see man fstat */;
